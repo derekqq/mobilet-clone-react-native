@@ -23,7 +23,7 @@ export const WrapperNav = styled(View)`
   flex: 0.2;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 16px; ;
+  padding-bottom: 16px;
 `;
 
 export const TextNav = styled(Text)`
