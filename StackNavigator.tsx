@@ -24,9 +24,14 @@ export const StackNavigator = () => {
         component={Screen.HomeScreen}
       />
       <Stack.Screen
-        options={{ title: "Wybierz ulge" }}
+        options={{ title: "Kup bilet" }}
         name="ChooseDiscount"
-        component={Screen.ChooseDiscount}
+        component={Screen.ChooseDiscountScreen}
+      />
+      <Stack.Screen
+        options={{ title: "ulgowy" }}
+        name="TicketList"
+        component={Screen.TicketListScreen}
       />
     </Stack.Navigator>
   );

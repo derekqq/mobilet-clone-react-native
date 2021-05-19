@@ -1,15 +1,15 @@
 import * as React from "react";
 import { StackScreenProps } from "@react-navigation/stack";
 import { Navigation } from "~components/Home/Navigation";
-import { Menu } from "~components/Home/Menu";
+import { ChooseDiscountList } from "~components/ChooseDiscountList";
 import { RootStackParamList } from "~types/navigation.types";
 
-export const ChooseDiscount = ({
+export const ChooseDiscountScreen = ({
   navigation,
 }: StackScreenProps<RootStackParamList, "ChooseTicket">) => {
   return (
     <>
-      <Menu />
+      <ChooseDiscountList />
     </>
   );
 };

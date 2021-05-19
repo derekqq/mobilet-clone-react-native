@@ -1,2 +1,3 @@
 export * from "./HomeScreen";
-export * from "./ChooseDiscount";
+export * from "./ChooseDiscountScreen";
+export * from "./TicketList";
