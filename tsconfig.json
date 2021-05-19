@@ -5,9 +5,12 @@
     "baseUrl": ".",
     "paths": {
       "~shared": ["src/shared"],
+      "~screens": ["screens"],
       "~screens/*": ["screens/*"],
       "~components": ["src/components"],
-      "~components/*": ["src/components/*"]
+      "~components/*": ["src/components/*"],
+      "~types": ["src/types"],
+      "~types/*": ["src/types/*"]
     }
   },
   "target": "esnext",
