@@ -7,6 +7,9 @@ export const ButtonBlue = styled(TouchableOpacity)`
   text-transform: uppercase;
   font-weight: bold;
   background-color: #1162a4;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
 `;
 
 export const ListItem = styled(TouchableOpacity)`

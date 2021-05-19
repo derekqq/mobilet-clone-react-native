@@ -33,6 +33,11 @@ export const StackNavigator = () => {
         name="TicketList"
         component={Screen.TicketListScreen}
       />
+      <Stack.Screen
+        options={{ title: "Kraków ZTP" }}
+        name="ValidateTicket"
+        component={Screen.ValidateTicketScreen}
+      />
     </Stack.Navigator>
   );
 };

@@ -2,13 +2,19 @@ import React from "react";
 import { View } from "react-native";
 import * as SH from "~shared";
 import * as S from "./TicketList.styles";
+import { useNavigation } from "@react-navigation/native";
 
 export const TicketList = () => {
+  const { navigate } = useNavigation();
   const discount = 0.5;
+
   return (
     <S.ContainerScroll>
       {price.map((item, index) => (
-        <SH.Button.ListItem key={index}>
+        <SH.Button.ListItem
+          key={index}
+          onPress={() => navigate("ValidateTicket")}
+        >
           <SH.Text.Text16>{item.name}</SH.Text.Text16>
           <SH.Text.Text16>{item.companyName}</SH.Text.Text16>
           <SH.Text.Text16 bold>

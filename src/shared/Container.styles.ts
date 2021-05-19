@@ -21,7 +21,7 @@ export const ContainerRed = styled(View)<TPropsContainerRed>`
   background-color: #bf0007;
   width: 100%;
   margin: 0 auto;
-  width: ${({ height }) => (height ? `${height}px` : `auto`)};
+  height: ${({ height }) => (height ? `${height}px` : `auto`)};
 `;
 
 export const ContainerWhite = styled(View)`
@@ -29,6 +29,7 @@ export const ContainerWhite = styled(View)`
   width: 100%;
   height: 100%;
   padding-top: 8px;
+  padding: 8px;
 `;
 
 export const ContainerSafe = styled(SafeAreaView)`
