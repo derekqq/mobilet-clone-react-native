@@ -9,9 +9,9 @@ export const Menu = () => {
   return (
     <SH.Container.ContainerWhite>
       <S.Row>
-        <S.MenuButton>
+        <S.MenuButton onPress={() => navigate("PreviewTicket")}>
           <SVG.CurrentTicket />
-          <SH.Text.Text18 white>aktywne bilety</SH.Text.Text18>
+          <SH.Text.Text18 white>ostatni bilet</SH.Text.Text18>
         </S.MenuButton>
         <S.MenuButton onPress={() => navigate("ChooseDiscount")}>
           <SVG.Bus />

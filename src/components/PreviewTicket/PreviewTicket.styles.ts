@@ -15,6 +15,31 @@ export const ContainerBorder = styled(View)`
   border: 2px solid #fff;
 `;
 
-export const ContainerQRcode = styled(View)`
+export const ContainerQRcode = styled(View)<TPropsCircle>`
   border: 20px solid #fff;
 `;
+
+export const Circle = styled(View)<TPropsCircle>`
+  border-radius: 50;
+  width: 20px;
+  height: 20px;
+  background-color: #7d7d7d;
+
+  ${({ active }) =>
+    active &&
+    css`
+      background-color: #ff0000;
+    `}
+`;
+
+export const CircleWrapper = styled(View)`
+  margin-top: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+type TPropsCircle = {
+  active?: boolean;
+};

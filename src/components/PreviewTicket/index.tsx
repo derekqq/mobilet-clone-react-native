@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as SH from "~shared";
+import * as S from "./PreviewTicket.styles";
 import { useNavigation } from "@react-navigation/native";
 import { useSelectedTicket } from "~hooks";
 import { PreviewTicketOne } from "./PreviewTicketOne";
@@ -35,6 +36,11 @@ export const PreviewTicket = () => {
         {currentTab === 1 && <PreviewTicketOne />}
         {currentTab === 2 && <PreviewTicketTwo />}
         {currentTab === 3 && <PreviewTicketThree />}
+        <S.CircleWrapper>
+          {[...Array(3)].map((x, index) => (
+            <S.Circle active={currentTab === index + 1} />
+          ))}
+        </S.CircleWrapper>
       </SH.Container.ContainerWhite>
     </GestureRecognizer>
   );
