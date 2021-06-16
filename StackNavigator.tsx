@@ -48,6 +48,11 @@ export const StackNavigator = () => {
         name="PreviewTicket"
         component={Screen.PreviewTicketScreen}
       />
+      <Stack.Screen
+        options={{ title: "" }}
+        name="TopUpAccount"
+        component={Screen.TopUpAccountScreen}
+      />
     </Stack.Navigator>
   );
 };

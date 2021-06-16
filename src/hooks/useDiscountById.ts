@@ -8,10 +8,6 @@ export const useDiscountById = (id: number) => {
   if (isLoading) return { isLoading, findDiscount: null };
 
   const findDiscount = data as TDiscount;
-  console.log(
-    "🚀 ~ file: useDiscountById.ts ~ line 11 ~ useDiscountById ~ findDiscount",
-    findDiscount
-  );
 
   return { findDiscount, isLoading: false };
 };

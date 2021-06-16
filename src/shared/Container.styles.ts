@@ -28,6 +28,13 @@ export const ContainerFlexRow = styled(View)<TPropsContainerFlexRow>`
       justify-content: center;
       align-items: center;
     `}
+  ${({ startCenter }) =>
+    startCenter &&
+    css`
+      justify-content: center;
+      align-items: flex-start;
+      padding-bottom: 30px;
+    `}
 `;
 
 export const ContainerRed = styled(View)<TPropsContainerRed>`
@@ -62,5 +69,6 @@ type TPropsContainerRed = {
 };
 
 type TPropsContainerFlexRow = {
-  center: boolean;
+  center?: boolean;
+  startCenter?: boolean;
 };

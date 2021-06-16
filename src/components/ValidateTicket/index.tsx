@@ -40,7 +40,7 @@ export const ValidateTicket = () => {
         navigate("PreviewTicket");
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
   };
 
@@ -53,7 +53,7 @@ export const ValidateTicket = () => {
         refetch();
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
   };
 

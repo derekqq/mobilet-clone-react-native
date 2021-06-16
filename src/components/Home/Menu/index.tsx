@@ -23,7 +23,7 @@ export const Menu = () => {
           <SVG.HistoryTicket />
           <SH.Text.Text18 white>historia biletów</SH.Text.Text18>
         </S.MenuButton>
-        <S.MenuButton>
+        <S.MenuButton onPress={() => navigate("TopUpAccount")}>
           <SVG.TopUp />
           <SH.Text.Text18 white>doładuj konto</SH.Text.Text18>
         </S.MenuButton>
