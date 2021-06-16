@@ -38,6 +38,11 @@ export const StackNavigator = () => {
         name="ValidateTicket"
         component={Screen.ValidateTicketScreen}
       />
+      <Stack.Screen
+        options={{ title: "Historia biletów" }}
+        name="HistoryTicket"
+        component={Screen.HistoryTicketScreen}
+      />
     </Stack.Navigator>
   );
 };

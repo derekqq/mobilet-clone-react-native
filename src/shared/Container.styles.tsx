@@ -26,8 +26,7 @@ export const ListItem = styled(TouchableOpacity)`
 `;
 
 export const Refresh = styled(TouchableOpacity)`
-  margin: 0 8px;
-  width: 20px;
-  height: 20px;
-  background: transparent;
+  width: 40px;
+  height: 40px;
+  background: yellow;
 `;

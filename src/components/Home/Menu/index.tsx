@@ -19,7 +19,7 @@ export const Menu = () => {
         </S.MenuButton>
       </S.Row>
       <S.Row>
-        <S.MenuButton>
+        <S.MenuButton onPress={() => navigate("HistoryTicket")}>
           <SVG.HistoryTicket />
           <SH.Text.Text18 white>historia biletów</SH.Text.Text18>
         </S.MenuButton>

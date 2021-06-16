@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { View, SafeAreaView } from "react-native";
 
 export const ContainerrBlueHome = styled(View)`
@@ -15,6 +15,19 @@ export const ContainerBlueNavbar = styled(ContainerrBlueHome)`
   height: 10%;
   align-items: flex-start;
   justify-content: flex-start;
+`;
+
+export const ContainerFlexRow = styled(View)<TPropsContainerFlexRow>`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  ${({ center }) =>
+    center &&
+    css`
+      justify-content: center;
+      align-items: center;
+    `}
 `;
 
 export const ContainerRed = styled(View)<TPropsContainerRed>`
@@ -36,8 +49,13 @@ export const ContainerSafe = styled(SafeAreaView)`
   background: #fff;
   width: 100%;
   height: 100%;
+  flex: 1;
 `;
 
 type TPropsContainerRed = {
   height: number;
+};
+
+type TPropsContainerFlexRow = {
+  center: boolean;
 };
