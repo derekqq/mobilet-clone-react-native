@@ -9,11 +9,11 @@ import { useUserInfo } from "~hooks";
 export const HistoryTicketList = () => {
   const discount = 0.5;
   const { isLoading, data } = useUserInfo();
-  const { customer_order_mobilets: listTicket } = data as TData;
 
   if (isLoading) {
-    return <SH.Text.Text16>"Wczytywanie ..."</SH.Text.Text16>;
+    return <SH.Text.Text16>Wczytywanie ...</SH.Text.Text16>;
   }
+  const { customer_order_mobilets: listTicket } = data as TData;
   return (
     <S.ContainerScroll>
       {listTicket.map((item) => (
