@@ -8,7 +8,7 @@ export const ContainerrBlueHome = styled(View)`
   align-items: center;
   justify-content: space-between;
   padding-bottom: 16px;
-  padding-top: 16px; ;
+  padding-top: 36px; ;
 `;
 
 export const ContainerBlueNavbar = styled(ContainerrBlueHome)`
@@ -57,7 +57,7 @@ export const ContainerWhite = styled(View)`
   padding: 8px;
 `;
 
-export const ContainerSafe = styled(SafeAreaView)`
+export const ContainerSafe = styled(View)`
   background: #fff;
   width: 100%;
   height: 100%;
