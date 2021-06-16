@@ -12,6 +12,7 @@ module.exports = function (api) {
             "~shared": "./src/shared",
             "~components": "./src/components",
             "~screens": "./screens",
+            "~context": "./context",
             "~types": "./src/types",
             "~hooks": "./src/hooks",
           },

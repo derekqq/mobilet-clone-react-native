@@ -14,6 +14,11 @@ export const BaseText = styled(Text)<TPropsText>`
     css`
       color: #fff;
     `}
+    ${({ center }) =>
+    center &&
+    css`
+      text-align: center;
+    `}
 `;
 
 export const Text16 = styled(BaseText)<TPropsText>`
@@ -29,4 +34,5 @@ export const Text20 = styled(BaseText)<TPropsText>`
 type TPropsText = {
   white?: boolean;
   bold?: boolean;
+  center?: boolean;
 };

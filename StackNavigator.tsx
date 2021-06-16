@@ -43,6 +43,11 @@ export const StackNavigator = () => {
         name="HistoryTicket"
         component={Screen.HistoryTicketScreen}
       />
+      <Stack.Screen
+        options={{ title: "" }}
+        name="PreviewTicket"
+        component={Screen.PreviewTicketScreen}
+      />
     </Stack.Navigator>
   );
 };

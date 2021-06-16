@@ -31,6 +31,11 @@ export const ContainerFlexRow = styled(View)<TPropsContainerFlexRow>`
 `;
 
 export const ContainerRed = styled(View)<TPropsContainerRed>`
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  padding: 16px 8px;
+
   background-color: #bf0007;
   width: 100%;
   margin: 0 auto;
