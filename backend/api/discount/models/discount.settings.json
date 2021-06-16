@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discounts",
+  "info": {
+    "name": "Discount"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "decimal"
+    }
+  }
+}

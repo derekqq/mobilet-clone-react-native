@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_list_tickets",
+  "info": {
+    "name": "ListTicket",
+    "icon": "arrow-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "expiredTime": {
+      "type": "time"
+    }
+  }
+}

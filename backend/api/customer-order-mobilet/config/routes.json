@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/customer-order-mobilets",
+      "handler": "customer-order-mobilet.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customer-order-mobilets/count",
+      "handler": "customer-order-mobilet.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customer-order-mobilets/:id",
+      "handler": "customer-order-mobilet.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/customer-order-mobilets",
+      "handler": "customer-order-mobilet.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/customer-order-mobilets/:id",
+      "handler": "customer-order-mobilet.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/customer-order-mobilets/:id",
+      "handler": "customer-order-mobilet.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_orders",
+  "info": {
+    "name": "customer_order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer_id": {
+      "via": "customer_orders",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "order_time": {
+      "type": "datetime"
+    },
+    "final_price": {
+      "type": "decimal"
+    },
+    "orderList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list",
+      "required": true
+    }
+  }
+}

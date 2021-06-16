@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "name": "Ticket",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": false
+    },
+    "basePrice": {
+      "type": "decimal"
+    }
+  }
+}
