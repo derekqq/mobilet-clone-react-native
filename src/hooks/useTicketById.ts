@@ -1,17 +1,19 @@
 import { useQuery } from "react-query";
 
-export const useDiscountById = (id: number) => {
-  const { data, error } = useQuery("listTicket", () =>
-    fetch("http://localhost:1337/discounts").then((res) => res.json())
+export const useTicketById = (id: number) => {
+  const { data, error, isLoading } = useQuery("listTicket", () =>
+    fetch("http://localhost:1337/tickets").then((res) => res.json())
   );
+
+  if (isLoading) return { isLoading };
 
   const dataList = data as TTicketList;
 
-  try {
-    const findTicket = dataList.find((el) => el.id === id);
-    return findTicket;
-  } catch (err) {
-    return error;
+  const findTicket = dataList.find((el) => el.id === id);
+  if (findTicket) {
+    return { findTicket, isLoading: false };
+  } else {
+    throw new Error("Ticket not found");
   }
 };
 

@@ -1,10 +1,10 @@
 import * as React from "react";
-import { TicketList } from "~components/TicketList";
+import { HistoryTicketList } from "~components/HistoryTicketList";
 
 export const HistoryTicketScreen = () => {
   return (
     <>
-      <TicketList />
+      <HistoryTicketList />
     </>
   );
 };

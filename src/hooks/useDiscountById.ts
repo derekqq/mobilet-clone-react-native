@@ -1,17 +1,18 @@
 import { useQuery } from "react-query";
 
 export const useDiscountById = (id: number) => {
-  const { data, error } = useQuery("discountList", () =>
+  const { data, error, isLoading } = useQuery("discountList", () =>
     fetch("http://localhost:1337/discounts").then((res) => res.json())
   );
 
-  const dataList = data as TDiscountList;
+  if (isLoading) return { isLoading, findDiscount: null };
 
-  try {
-    const findDiscount = dataList.find((el) => el.id === id);
-    return findDiscount;
-  } catch (err) {
-    return error;
+  const dataList = data as TDiscountList;
+  const findDiscount = dataList.find((el) => el.id === id);
+  if (findDiscount) {
+    return { findDiscount, isLoading: false };
+  } else {
+    throw new Error("Discount not found");
   }
 };
 

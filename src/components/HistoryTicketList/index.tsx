@@ -3,15 +3,13 @@ import { View } from "react-native";
 import * as SH from "~shared";
 import * as S from "./HistoryTicketList.styles";
 import { useNavigation } from "@react-navigation/native";
-import {HistoryTicketListItem} from './HistoryTicketListItem'
-import {useUserInfo} from '~hooks'
+import { HistoryTicketListItem } from "./HistoryTicketListItem";
+import { useUserInfo } from "~hooks";
 
-
-export const TicketList = () => {
-
+export const HistoryTicketList = () => {
   const discount = 0.5;
-  const { isLoading ,data} = useUserInfo();
-  const listTicket = data as TTicketList;
+  const { isLoading, data } = useUserInfo();
+  const { customer_order_mobilets: listTicket } = data as TData;
 
   if (isLoading) {
     return <SH.Text.Text16>"Wczytywanie ..."</SH.Text.Text16>;
@@ -19,14 +17,21 @@ export const TicketList = () => {
   return (
     <S.ContainerScroll>
       {listTicket.map((item) => (
-       
+        <HistoryTicketListItem key={item.id} {...item}></HistoryTicketListItem>
       ))}
     </S.ContainerScroll>
   );
 };
 
-type TTicketList = {
-  name: string;
-  basePrice: number;
-  id: number;
-}[];
+type TData = {
+  customer_order_mobilets: {
+    id: number;
+    quantity: number;
+    discount: number;
+    ticket: number;
+    customerId: number;
+    published_at: string;
+    created_at: string;
+    updated_at: string;
+  }[];
+};
