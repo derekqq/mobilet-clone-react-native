@@ -7,7 +7,6 @@ import { useSelectedTicket } from "~hooks";
 import QRCode from "react-native-qrcode-svg";
 
 export const PreviewTicketThree = () => {
-  const { navigate } = useNavigation();
   const { selectedOrder } = useSelectedTicket();
 
   if (selectedOrder.isLoading) {

@@ -8,6 +8,7 @@ module.exports = function (api) {
         "module-resolver",
         {
           alias: {
+            "~root": ".",
             "~src": "./src/",
             "~shared": "./src/shared",
             "~components": "./src/components",

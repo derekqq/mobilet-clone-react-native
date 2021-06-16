@@ -18,7 +18,7 @@ export const TicketList = () => {
   };
 
   if (isLoading || selectedDiscount.isLoading) {
-    return <SH.Text.Text16>"Wczytywanie ..."</SH.Text.Text16>;
+    return <SH.Text.Text16>Wczytywanie ...</SH.Text.Text16>;
   }
 
   return (

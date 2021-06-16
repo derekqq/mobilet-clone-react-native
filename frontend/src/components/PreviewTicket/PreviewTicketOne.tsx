@@ -6,7 +6,6 @@ import { useNavigation } from "@react-navigation/native";
 import { useSelectedTicket } from "~hooks";
 
 export const PreviewTicketOne = () => {
-  const { navigate } = useNavigation();
   const { selectedOrder } = useSelectedTicket();
 
   if (selectedOrder.isLoading) {
