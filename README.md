@@ -1,4 +1,4 @@
-Uruchomienie projektu
+To run project
 
 Backend:
 
